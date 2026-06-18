@@ -1,0 +1,552 @@
+:root {
+    --header-color: #1A0B2E;
+    --name-color: #7127BA;
+    --cover-color: #7127BA;
+    --facebook-color: #1877F2;
+    --card-color: #693B93;
+    --innerCard-color: #2C1250;
+    --header-color: #1A0B2E;
+    --proj-color: #9857D3;
+    --white-color: #FFFFFF;
+    --linear-color: (#693B93, #693B93);
+    --dark-v: #251C31;
+    --violet-color: #693B93;
+
+
+
+
+
+}
+
+* {
+     background-color: #1b0a30 ; 
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #1A0B2E; /* Matches your cosmic dark background */
+    padding: 20px 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1100px; /* Aligns with your grid content width */
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, links to right */
+    align-items: center;            /* Perfectly centers them vertically */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 32px; /* Adjust based on your asset scale */
+    width: auto;
+    object-fit: contain;
+}
+
+header ul {
+    display: flex;
+    gap: 32px;            /* Evenly spaces your nav links horizontally */
+    list-style: none;     /* Strips out default bullet points */
+}
+
+header ul li a {
+    color: #cbd5e1;       /* Light secondary text */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+header ul li a:hover {
+    color: #a855f7;       /* Smooth purple hover accent color */
+}
+
+/* ==========================================================================
+   Main Content Layout Styles
+   ========================================================================== */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Forces clear vertical separation down the layout stack */
+}
+
+
+/* ==========================================================================
+   1. Portfolio Intro & Hero Layout
+   ========================================================================== */
+/* ==========================================================================
+   Global Font Reset for the Section
+   ========================================================================== */
+.portfolio-intro, 
+.portfolio-intro * {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    box-sizing: border-box;
+}
+
+.portfolio-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 70px; /* Spacing between top hero row and bio block */
+}
+
+/* ==========================================================================
+   Hero Flex Container Setup
+   ========================================================================== */
+.hero-container {
+    display: flex;
+    align-items: flex-end;      /* Aligns bases of avatar circle and heading block */
+    justify-content: flex-start;
+    gap: 48px;                  /* Snaps elements close together like your mockup */
+    position: relative;         /* Anchor point for absolute position elements */
+    padding-top: 40px;          /* Prevents your absolutely positioned floating text from clipping */
+    width: 100%;
+}
+
+/* Floating "Hello! I Am..." Positioning */
+.greeting {
+    position: absolute;
+    top: 0px;
+    left: 90px;                 /* Offsets the string over the avatar image boundary */
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.greeting .highlight {
+    color: #a855f7;
+    font-weight: 600;
+}
+
+.avatar-side {
+    flex-shrink: 0;
+    display: flex;
+}
+
+.me-img {
+    width: 160px;               /* Scaled precisely to fit your custom presentation layout */
+    height: auto;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   Hero Typography Styling
+   ========================================================================== */
+.hero-text-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #cbd5e1;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin: 0;
+}
+
+.main-heading {
+    font-size: 3.2rem;          /* Delivers the exact line wrapping balance seen in image 1 */
+    font-weight: 700;
+    line-height: 1.15;
+    color: #ffffff;
+    margin: 4px 0;
+    letter-spacing: -0.5px;
+}
+
+/* Organic Oval Border Shape on "cover..." */
+.circled-text {
+    color: #a855f7;
+    position: relative;
+    display: inline-block;
+    padding: 0 4px;
+}
+
+.circled-text::after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 2px;
+    width: 112%;
+    height: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.65);
+    border-radius: 55% 45% 52% 48% / 48% 52% 50% 53%; /* Distorts box border into hand-drawn shape */
+    transform: rotate(-1.5deg);
+    pointer-events: none;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin: 4px 0 0 0;
+}
+
+/* ==========================================================================
+   Bio Details Typography Styling
+   ========================================================================== */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 750px;
+}
+
+.role-heading {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.current-status {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.company-link {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.company-link:hover {
+    text-decoration: underline;
+}
+
+.bio-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* ==========================================================================
+   2. Work Experience Grid Layout
+   ========================================================================== */
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.section-heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.experience-card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #1b0a30 0%, #0d0418 100%);
+    border: 1px solid #2e164d;
+    border-radius: 20px;
+    padding: 32px 40px;
+    gap: 28px;
+}
+
+.card-left {
+    flex-shrink: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-left img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.card-right h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.card-right p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.btn-learn-more {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid #58209e;
+    padding: 10px 22px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-learn-more:hover {
+    background-color: #58209e;
+    border-color: #a855f7;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+/* Decorative Central Ellipse Element */
+.elipse-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.Elipse {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   3. Featured Projects (Z-Pattern Layout)
+   ========================================================================== */
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.project-row {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+/* Swaps the visual layout sides for the second project entry */
+.project-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.project-meta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #a855f7;
+    letter-spacing: 1px;
+}
+
+.project-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.project-description {
+    background: linear-gradient(135deg, #1b0a30 0%, #0d0418 100%);
+    border: 1px solid #2e164d;
+    padding: 28px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.project-description p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Styles the small interaction sparkle/click icon elements inside descriptions */
+.iconClick {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    width: 32px;
+    height: auto;
+}
+
+.project-tech-stack {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.tech-icon {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+}
+
+.project-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   4. Responsive Reflows (Mobile & Tablet Optimization)
+   ========================================================================== */
+@media (max-width: 900px) {
+    .experience-grid {
+        grid-template-columns: 1fr; /* Transitions cards into a clean vertical list */
+    }
+
+    .hero-container,
+    .project-row,
+    .project-row.reverse {
+        flex-direction: column; /* Collapses horizontal splits on smaller screens */
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .project-image img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .role-heading {
+        font-size: 2rem;
+    }
+
+    .experience-card {
+        flex-direction: column; /* Breaks internal card row down to clear space for the text */
+        align-items: flex-start;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .card-left {
+        width: 65px;
+    }
+}
+
+/* ==========================================================================
+   Footer Component Styles
+   ========================================================================== */
+footer {
+    width: 100%;
+    background-color: #0b0214; /* Matches the deep cosmic black background */
+    padding: 60px 0 80px 0;    /* Generous bottom padding to give the page a clean finish */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.portfolio-footer {
+    width: 100%;
+    max-width: 650px; /* Limits the width exactly like your mockup to keep line-lengths readable */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns all text and icons tightly to the left column */
+    gap: 24px;               /* Clean spacing between header, body text, email, and icons */
+}
+
+.footer-heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.footer-text {
+    font-size: 1.05rem;
+    color: #94a3b8;         /* Muted gray-blue color for long-form reading */
+    line-height: 1.6;        /* Breathable line spacing matching your UI design */
+}
+
+.footer-email a {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dashed #a855f7; /* Muted purple dashed line under the email */
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.footer-email a:hover {
+    color: #a855f7;          /* Turns fully purple on hover */
+    border-bottom-style: solid;
+}
+
+.footer-socials {
+    margin-top: 8px;        /* Extra breathing room below the email */
+    display: flex;
+    align-items: center;
+}
+
+.Socials {
+    height: 24px;            /* Scales your social asset row cleanly */
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.Socials:hover {
+    opacity: 1;              /* Subtle brightness pop when interacting */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 0 60px 0;
+    }
+    
+    .footer-heading {
+        font-size: 1.8rem;
+    }
+}
