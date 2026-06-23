@@ -88,8 +88,8 @@ nav ul li a:hover {
     position: absolute;
     width: 385px;
     height: 431px;
-    left: 575px;
-    top: 80px;
+    left: 475px;
+    top: 90px;
     z-index: -1;
 
     background: radial-gradient(50% 50% at 50% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%);
@@ -99,7 +99,7 @@ nav ul li a:hover {
     position: absolute;
     width: 185px;
     height: 131px;
-    left: 790px;
+    left: 670px;
     top: 150px;
     z-index: -1;
 }
@@ -317,8 +317,8 @@ nav ul li a:hover {
     position: absolute;
     width: 625px;
     height: 700px;
-    left: 750px;
-    top: 1050px;
+    left: 650px;
+    top: 1022px;
     z-index: -1;
 
     background: radial-gradient(50% 50% at 50% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%);
@@ -506,8 +506,8 @@ footer {
     position: absolute;
     width: 585px;
     height: 631px;
-    left: 1125px;
-    bottom: 820px;
+    left: 1025px;
+    bottom: 890px;
     z-index: -1;
 
     background: radial-gradient(50% 50% at 50% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%);
@@ -517,8 +517,8 @@ footer {
     position: absolute;
     width: 585px;
     height: 631px;
-    left: 825px;
-    bottom: 820px;
+    left: 725px;
+    bottom: 890px;
     z-index: -1;
 
     background: radial-gradient(50% 50% at 50% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%);
@@ -528,8 +528,8 @@ footer {
     position: absolute;
     width: 585px;
     height: 631px;
-    left: 325px;
-    bottom: 330px;
+    left: 225px;
+    bottom: 390px;
     z-index: -1;
 
     background: radial-gradient(50% 50% at 50% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%);
